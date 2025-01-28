@@ -25,8 +25,8 @@ class homePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Room Allocation System"),
-        backgroundColor: Colors.teal,
-        centerTitle: true,
+        backgroundColor: Colors.green,
+        centerTitle: false,
       ),
     );
   }
