@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:room_allocation_system/screens/Class%20Room/class_room_homePage.dart';
 import 'package:room_allocation_system/screens/student/home_page_student.dart';
 
 void main(){
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePageStudent(),
+      //home: HomePageStudent(),
+      home: ClassRoomHomepage(),
       debugShowCheckedModeBanner: false,
     );
   }
