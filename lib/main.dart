@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:room_allocation_system/screens/student/home_page_student.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,26 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: homePage(),
+    return const MaterialApp(
+      home: HomePageStudent(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
-class homePage extends StatelessWidget {
-  const homePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Room Allocation System"),
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.white,
-        centerTitle: false,
-      ),
-    );
-  }
-}
-
