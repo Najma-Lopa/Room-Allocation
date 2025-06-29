@@ -1,4 +1,4 @@
-# Software Requirements Specification for HSTU\_T\&S\_HUB: A Real-Time Communication System
+# HSTU\_T\&S\_HUB: A Real-Time Communication System
 
 **Version 1.0**
 
