@@ -1,7 +1,5 @@
 # HSTU\_T\&S\_HUB: A Real-Time Communication System
 
-# Final Project Report on HSTU T&S HUB
-
 ---
 
 **Cover Page**
