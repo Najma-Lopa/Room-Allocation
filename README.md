@@ -1,322 +1,343 @@
 # HSTU\_T\&S\_HUB: A Real-Time Communication System
 
-**Version 1.0**
+# Final Project Report on HSTU T&S HUB
 
------
+---
 
-### **Table of Contents**
+**Cover Page**
 
-1.  [**Introduction**](https://www.google.com/search?q=%231-introduction)
-    1.  (\#11-purpose-of-the-document)
-    2.  (\#12-product-scope)
-    3.  (\#13-definitions-acronyms-and-abbreviations)
-    4.  (\#14-references)
-    5.  (\#15-document-overview)
-2.  (\#2-overall-description)
-    1.  [Product Perspective](https://www.google.com/search?q=%2321-product-perspective)
-    2.  [Product Functions](https://www.google.com/search?q=%2322-product-functions)
-    3.  [User Classes and Characteristics](https://www.google.com/search?q=%2323-user-classes-and-characteristics)
-    4.  [Operating Environment](https://www.google.com/search?q=%2324-operating-environment)
-    5.  (\#25-design-and-implementation-constraints)
-    6.  (\#26-assumptions-and-dependencies)
-3.  (\#3-specific-requirements)
-    1.  (\#31-external-interface-requirements)
-        1.  [User Interfaces (UI)](https://www.google.com/search?q=%23311-user-interfaces-ui)
-        2.  [Hardware Interfaces](https://www.google.com/search?q=%23312-hardware-interfaces)
-        3.  (\#313-software-interfaces)
-        4.  [Communications Interfaces](https://www.google.com/search?q=%23314-communications-interfaces)
-    2.  (\#32-functional-requirements-fr)
-        1.  (\#module-fr-1-user-authentication-and-role-management)
-        2.  (\#module-fr-2-teacher-centric-features)
-        3.  (\#module-fr-3-student-centric-features)
-        4.  (\#module-fr-4-class-representative-cr-empowered-features)
-        5.  (\#module-fr-5-system-wide-features)
-    3.  (\#33-non-functional-requirements-nfr)
-        1.  (\#331-performance-requirements)
-        2.  (\#332-security-requirements)
-        3.  (\#333-usability-requirements)
-        4.  (\#334-reliability-and-availability)
-        5.  (\#335-scalability)
-        6.  [Maintainability](https://www.google.com/search?q=%23336-maintainability)
-4.  [**Conclusion**](https://www.google.com/search?q=%234-conclusion)
+> **Project Title:** HSTU T&S HUB: An Integrated Academic Portal for Students and Teachers
+>
+> **Submitted By:**
+> [Your Name(s)]
+> [Your Student ID(s)]
+>
+> **Supervised By:**
+> [Your Supervisor's Name]
+> [Supervisor's Designation]
+>
+> **Department of Computer Science and Engineering**
+> **Hajee Mohammad Danesh Science and Technology University, Dinajpur**
+>
+> **Date of Submission:** [Date]
 
------
+---
+
+**Table of Contents**
+
+* List of Figures
+* List of Tables
+1.  **Introduction**
+    1.1. Background
+    1.2. Problem Statement
+    1.3. Motivation
+    1.4. Objectives
+2.  **Related Work**
+3.  **Requirement Specifications**
+    3.1. Functional Requirements
+    3.2. Non-functional Requirements
+4.  **System Development**
+    4.1. SDLC Model: Iterative Model
+    4.2. Technology Stack
+    4.3. System Architecture and Module Development
+5.  **Results and Discussion**
+    5.1. The Teacher's Experience
+    5.2. The Student's Experience
+6.  **Economic Analysis**
+    6.1. Cost Analysis
+    6.2. Benefit Analysis
+7.  **Conclusion**
+    7.1. Conclusive Summary
+    7.2. Limitations of the Project
+    7.3. Recommendation/Future Work
+8.  **References**
+
+---
+
+**List of Figures**
+
+*(Note: Page numbers are placeholders and should be updated in the final document.)*
+
+* Figure 3.1: Survey Responses - Level & Semester .......................... p. X
+* Figure 3.2: Survey Responses - Faculty .................................... p. X
+* Figure 4.1: UML Diagram of System Architecture .......................... p. X
+* Figure 5.1: Teacher's Dashboard Screenshot .............................. p. X
+* Figure 5.2: Quiz Creation Interface Screenshot .......................... p. X
+* Figure 5.3: Quiz Analytics Dashboard Screenshot ......................... p. X
+* Figure 5.4: Student List & CR Management Screenshot ..................... p. X
+* Figure 5.5: Student's Dashboard Screenshot .............................. p. X
+* Figure 5.6: Resource Sharing Feed Screenshot ............................ p. X
+* Figure 5.7: Smart Alarm Interface Screenshot ............................ p. X
+* Figure 5.8: AI Assistant Conversation Screenshot ........................ p. X
+
+---
+
+**List of Tables**
+
+*(Note: Page numbers are placeholders and should be updated in the final document.)*
+
+* Table 2.1: Comparative Analysis of Existing Systems .................... p. X
+* Table 3.1: Summary of Functional Requirements .......................... p. X
+* Table 4.1: SDLC Iteration Breakdown .................................... p. X
+* Table 4.2: Technology Stack Summary .................................... p. X
+* Table 4.3: Firestore Database Schema Overview .......................... p. X
+* Table 6.1: Cost-Benefit Analysis Summary ............................... p. X
+
+---
+
+### **Abstract**
+
+The "HSTU T&S HUB" project represents a significant leap forward in digitalizing the academic environment at Hajee Mohammad Danesh Science and Technology University. It is a comprehensive, mobile-first academic portal developed using Flutter, conceived to bridge the persistent digital and communication gap between students and teachers. This application directly confronts the inefficiencies arising from a lack of a centralized platform for core academic activities. It achieves this by seamlessly integrating a suite of powerful, interconnected features. These include a secure, role-based authentication system that differentiates between student and teacher privileges; a dynamic, real-time classroom allocation module equipped with intelligent conflict prevention; and a complete online quiz system that supports both automated (MCQ) and manual (written) evaluation, complemented by data-driven analytics for faculty.
+
+Furthermore, the system incorporates a multi-layered communication suite to foster collaboration, featuring both a public forum for students and a private, dedicated channel for Class Representatives and teachers. A standout feature is the smart alarm system, which moves beyond manual reminders by automatically scheduling alerts for allocated classes based on user-defined preferences. The application's robust functionality is powered by a hybrid backend architecture, strategically utilizing Firebase for core services like authentication, Firestore database management, and real-time notifications, while leveraging Supabase for efficient, scalable file storage and resource sharing. Developed using an agile Iterative SDLC model, the application not only delivers on functionality but also on user experience, boasting a modern, intuitive interface. This is enhanced by an AI-powered assistant for instant query resolution, a real-time resource sharing feed, and easy access to the complete course syllabus. Ultimately, the HSTU T&S HUB aims to fundamentally enhance academic efficiency, streamline communication, and cultivate a more connected, productive, and modern campus experience for the entire university community.
+
+---
 
 ### **1. Introduction**
 
-This section provides an overview of the Software Requirements Specification (SRS) for the "HSTU\_T\&S\_HUB" application. It defines the purpose and scope of the document, lists definitions and references, and provides a guide to its structure.
+#### **1.1. Background**
 
-#### **1.1 Purpose of the Document**
+In the contemporary educational landscape, the integration of digital tools has transitioned from a supplementary convenience to an absolute necessity for effective academic management and pedagogy. The global shift towards digital transformation has profoundly impacted higher education, compelling institutions to rethink traditional models of teaching, communication, and administration. Universities worldwide are increasingly expected to provide a seamless, integrated digital environment that reflects the interconnected nature of modern life. However, many institutions, including Hajee Mohammad Danesh Science and Technology University (HSTU), often grapple with a legacy of fragmented systems. This technological dissonance creates a significant operational bottleneck.
 
-This document provides a complete and detailed description of the software requirements for the "HSTU\_T\&S\_HUB: A Real-Time Communication System," Version 1.0. Its primary purpose is to serve as the definitive technical blueprint for the application, establishing a clear and unambiguous understanding of its features and capabilities.[1]
+Currently, the academic workflow for both students and faculty is scattered across a multitude of disconnected platforms. Official announcements might be posted on physical notice boards or the university website, while course materials are often distributed via email. Class-specific discussions and urgent updates frequently occur on informal social media platforms like Facebook or WhatsApp groups. This fragmentation forces students and teachers to constantly navigate between different applications and physical locations to gather essential information, leading to a disjointed and often frustrating user experience. This systemic inefficiency results in tangible negative consequences: critical information is easily missed, communication becomes unreliable, and valuable time is lost managing multiple channels. For an institution dedicated to science and technology, this reliance on outdated and ad-hoc methods represents a significant gap between its mission and its operational reality.
 
-This SRS is intended for a diverse audience, including developers, testers, project managers, and academic stakeholders. For developers, it provides a precise guide for implementation. For testers, it forms the basis for creating validation and verification plans. For project managers and stakeholders, it establishes the foundational agreement on what the software will deliver.[2, 3] As the project is being developed using an incremental Software Development Life Cycle (SDLC) model, this document specifies the requirements for the initial increments and will serve as a version-controlled baseline for future development cycles.[4]
+#### **1.2. Problem Statement**
 
-#### **1.2 Product Scope**
+The core problem this project addresses is the critical absence of a unified, mobile-accessible platform at Hajee Mohammad Danesh Science and Technology University (HSTU) that consolidates all essential academic activities. This technological void forces students and faculty to operate within a fragmented and inefficient digital ecosystem, leading to a series of distinct, yet interconnected, challenges that hinder academic productivity and communication. These challenges are:
 
-The "HSTU\_T\&S\_HUB" is a dedicated, mobile-first communication and academic management platform designed specifically for the community of Hajee Mohammad Danesh Science and Technology University (HSTU). The software aims to centralize and streamline the academic interactions between teachers, students, and their designated class representatives (CRs).
+* **Inefficient Classroom Management and Booking:** The current process for allocating and booking classrooms is largely manual or semi-automated, relying on disparate schedules and direct communication. This creates a significant administrative burden and is highly susceptible to human error, frequently resulting in scheduling conflicts, double-bookings, or underutilization of available spaces. For Class Representatives (CRs) and teachers, finding an available room becomes a time-consuming task of cross-referencing and communication, rather than a simple, transparent digital process.
+* **Lack of a Standardized Online Assessment Platform:** In the absence of an official, integrated tool, online quizzes and assessments are conducted using a variety of non-standardized, third-party platforms (e.g., Google Forms, social media polls). This approach lacks consistency, poses potential security risks, and fails to provide the robust features required for formal academic evaluation, such as timed questions, support for diverse question formats (like written answers), automated grading, and centralized performance analytics for teachers.
+* **Ineffective and Disorganized Distribution of Academic Resources:** The distribution of essential academic materials—such as lecture notes, assignments, and important notices—is currently ad-hoc. Materials are scattered across emails, social media groups, and other informal channels. This creates a disorganized repository where files can be easily lost, students who join a course late may miss previously shared materials, and there is no single, authoritative source for course content.
+* **Fragmented and Unreliable Communication Channels:** Communication between teachers, students, and CRs is severely fragmented. Official announcements may be missed if not seen on a physical notice board, while critical, time-sensitive discussions happen in informal chat groups. This creates a communication breakdown where there is no single, official channel for academic discourse, leading to misinformation, delays, and a lack of an auditable trail for important academic conversations, particularly between faculty and designated student representatives.
+* **Absence of Proactive and Automated Reminders:** The current system is entirely reactive, placing the full cognitive load of schedule management on the students. Without an integrated system to provide automated and timely reminders, students are more likely to miss important events such as scheduled classes, quiz deadlines, or room allocation changes. This lack of a proactive notification and smart alarm system directly impacts student attendance, participation, and overall academic performance.
 
-The key benefits, objectives, and goals of the product are as follows:
+#### **1.3. Motivation**
 
-  * **Benefit:** To create a unified, secure, and efficient communication environment, thereby reducing the dependency on fragmented and informal social media platforms for academic purposes.
-  * **Objective:** To provide a single, integrated hub for core academic activities, including the instant sharing of educational resources, management of online quizzes, dissemination of important notifications, and fostering direct communication.[5]
-  * **Goal:** To significantly enhance the educational experience at HSTU by leveraging real-time technology for instant data synchronization and incorporating AI-driven assistance to improve workflow efficiency and student engagement.[4]
+The motivation behind the "HSTU T&S HUB" project is to create a seamless, all-in-one digital ecosystem for the HSTU community. The goal is to enhance the academic experience by providing a single, reliable, and feature-rich application that automates administrative tasks, streamlines communication, and provides easy access to information, thereby saving time and improving overall productivity for both students and faculty.
 
-The scope of this SRS encompasses all features detailed in the initial project overview. This includes user role management (Teacher, Student, CR), real-time communication channels, online quiz functionality, resource sharing capabilities, and integrated utility features such as the smart alarm system and the AI-powered chatbot. Any backend administrative panels or web-based portals are considered outside the scope of this document unless explicitly specified otherwise.
+This motivation is rooted in several key factors that reflect the evolving needs of modern higher education:
 
-#### **1.3 Definitions, Acronyms, and Abbreviations**
+* **Enhancing Administrative Efficiency and Reducing Overhead:** A significant motivation was to alleviate the administrative burden on faculty and staff. The manual processes of classroom allocation, quiz creation, and result compilation are not only time-consuming but also prone to human error. By automating these tasks, the application frees up valuable time for educators, allowing them to focus more on their primary responsibilities of teaching, research, and student mentorship.
+* **Empowering Students with Real-Time Information and Proactive Tools:** The project was driven by the desire to empower students and reduce the cognitive load associated with managing their academic lives. In a fragmented system, students bear the full responsibility of tracking multiple platforms for updates. This application shifts that paradigm by providing a single source of truth and proactive tools like the smart alarm system and real-time notifications. This ensures students are always informed and can focus more on their studies rather than on administrative logistics.
+* **Fostering a More Connected and Collaborative Academic Community:** The lack of a centralized communication platform often leads to a disconnected campus community. This project was motivated by the need to create official, reliable channels for academic discourse. By integrating features like a public student chat and a private channel for CRs and teachers, the application aims to foster a stronger sense of community, improve collaboration, and ensure that communication is both efficient and effective.
+* **Enabling Data-Driven Academic Insights:** A key motivation was to provide faculty with actionable data to improve their teaching methodologies. The online quiz system, with its detailed analytics, offers immediate insights into student performance, highlighting areas where students may be struggling. This data-driven approach enables teachers to tailor their instruction to better meet the needs of their students, fostering a more effective learning environment.
+* **Modernizing the University's Digital Infrastructure:** For a leading science and technology university, having a modern, efficient digital infrastructure is not just a convenience—it is a reflection of its identity and commitment to innovation. This project was motivated by the desire to align HSTU's operational reality with its forward-thinking mission, providing a state-of-the-art tool that meets the expectations of today's tech-savvy students and faculty.
 
-To ensure clarity and prevent ambiguity, this section defines key terms, acronyms, and abbreviations used throughout the document.[2]
+#### **1.4. Objectives**
 
-**Table 1: Definitions, Acronyms, and Abbreviations**
+The primary objectives of this project were meticulously defined to address the identified problems and achieve the overall vision of creating a unified digital ecosystem. Each objective targets a specific functional area, aiming to deliver a robust and feature-rich application:
 
-| Term/Acronym | Definition |
+* **To Develop a Secure and Role-Based Authentication System:** The foremost objective was to establish a secure gateway to the application's ecosystem. This involved creating a robust authentication mechanism that not only verifies user identity via email and password but also intelligently differentiates between two distinct user roles: "Student" and "Teacher." The system was designed to direct each user to a personalized dashboard with features and permissions tailored specifically to their role, thereby ensuring data privacy and a relevant user experience from the moment they log in.
+* **To Build a Real-Time, Cross-Platform Application:** A central goal was to develop a single, high-performance application that functions seamlessly on the Android platform, built using a single codebase with Flutter. This objective also emphasized real-time data synchronization. The application was engineered to ensure that any new information—such as a new resource being shared, a room being allocated, or a new chat message—is instantly reflected across all relevant user devices without requiring manual refreshing, leveraging the real-time capabilities of Firebase and Supabase.
+* **To Implement a Real-Time Classroom Allocation System with Conflict Detection:** This objective focused on solving the logistical challenge of classroom management. The goal was to create a dynamic system where authorized users (CRs and teachers) could view the live availability of classrooms and book them for specific time slots. A critical part of this objective was to engineer an intelligent conflict detection mechanism that queries the database in real-time to prevent any double-bookings, thereby eliminating scheduling errors and maximizing the efficient utilization of university resources.
+* **To Build a Comprehensive Online Quiz Module:** The aim here was to create a complete, end-to-end assessment tool within the application. This objective was twofold: first, to empower teachers with the ability to create versatile quizzes that support both objective (MCQ) and subjective (Written) question types, with per-question time limits. Second, to provide students with a modern and intuitive interface for taking these assessments, and to furnish teachers with a dedicated portal for evaluating written answers and viewing detailed performance analytics, including visual data representations like score distribution charts.
+* **To Create a Multi-Layered Communication Suite:** To streamline academic communication, this objective was to design and implement a structured, multi-layered communication system. This involved creating a public, community-driven chat channel for all students to foster collaboration and general discussion. In parallel, a private and secure one-to-one communication channel was developed exclusively for Class Representatives (CRs) and teachers, ensuring that official and sensitive academic conversations remain confidential and are directed to the appropriate individuals.
+* **To Facilitate Seamless Sharing of Academic Resources:** This objective was to create a centralized and reliable system for the distribution of academic materials. The goal was to empower teachers to easily upload and share various types of resources, including lecture notes, images, and PDF documents. For students, the objective was to provide a real-time feed where these resources would appear instantly, creating a single, authoritative repository for all course-related materials that is easily accessible from their mobile devices.
+* **To Integrate a Smart and Proactive Alarm System:** Moving beyond simple reminders, this objective was to develop a "smart" alarm system that reduces the cognitive load on students. The system was designed to support both manual alarms for personal use and, more importantly, to automatically schedule native device alarms for upcoming academic events. This was achieved by intelligently integrating with the classroom allocation data and allowing students to set their own notification preferences (e.g., "remind me 15 minutes before class").
+* **To Develop an AI-Powered Assistant for Instant Support:** The final key objective was to enhance the user experience by providing an intelligent, on-demand support tool. This involved integrating the Google Gemini API to create an AI-powered chatbot. The assistant was designed not only to handle general queries but also to be context-aware, with the ability to query the application's live Firestore database to provide real-time, accurate answers to specific questions about the system's data (e.g., "How many students are registered?").
+* **To Design a Modern and Engaging User Interface:** A core objective was to move beyond purely functional design and create a visually appealing and highly engaging user experience. This was achieved by implementing a modern UI/UX design language featuring Glassmorphism, dynamic animations, and a consistent, aesthetically pleasing theme, with the goal of increasing user adoption and satisfaction.
+* **To Formalize and Empower the Class Representative (CR) Role:** A specific objective was to create a dedicated administrative tool for teachers to formally manage the CR role. This included functionality to appoint and remove a student as the CR, which in turn grants them specific permissions within the app (like room allocation). This formalizes a critical student leadership position and streamlines the associated administrative tasks.
+* **To Establish a Centralized Information Hub:** The project aimed to eliminate information silos by creating a single, authoritative source for key academic information. This was realized through the development of a comprehensive, easily navigable course syllabus viewer and a direct, one-click integration with the official university website, ensuring students always have access to accurate and up-to-date information.
+
+---
+
+### **2. Related Work**
+
+A review of existing systems reveals a landscape of general-purpose Learning Management Systems (LMS) and specialized tools.
+
+**Table 2.1:** Comparative Analysis of Existing Systems
+
+| Feature/Aspect | HSTU T&S HUB | Google Classroom | Moodle | Canvas | Blackboard Learn | Microsoft Teams |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Primary Purpose** | Integrated University Hub | General-purpose LMS | Open-source, customizable LMS | Enterprise-level LMS | Enterprise-level LMS | Communication & Collaboration Hub |
+| **Platform** | Mobile-first (Flutter) | Web & Mobile | Web-based, with mobile app | Web-based, with mobile app | Web-based, with mobile app | Web & Mobile |
+| **Quiz System** | MCQ & Written, Per-question timer, Analytics | Basic Quizzes (via Google Forms) | Highly Advanced, Numerous Question Types | Advanced, LTI Integrations | Advanced, Secure Assessment Tools | Basic (via Forms integration) |
+| **Resource Sharing** | Real-time (Text, Image, PDF) | Yes (via Google Drive) | Yes (File Uploads) | Yes (File Uploads) | Yes (Content Management) | Yes (via SharePoint/OneDrive) |
+| **Communication** | Public & Private Chat | Announcements, Comments | Forums, Messaging | Messaging, Discussions | Messaging, Discussions | Advanced Chat, Video Conferencing |
+| **Room Allocation** | **Yes (Real-time)** | No | No | No | No | No |
+| **Smart Alarm System**| **Yes (Automated)** | No | No | No | No | No |
+| **CR Management** | **Yes (Formalized Role)** | No | No | No | No | No |
+| **AI Assistant** | **Yes (Live Data Integrated)** | No | No | No | No | No |
+| **Backend** | Hybrid (Firebase & Supabase) | Google Cloud | Self-hosted | Cloud-based (AWS) | Cloud-based / Self-hosted | Microsoft Azure |
+| **Cost Model** | Low (Free Tiers) | Free (for Education) | Free (Hosting Costs) | High (Subscription) | High (Licensing) | Included with Microsoft 365 |
+| **Strength** | Tailored for HSTU, all-in-one, modern UI/UX | Simple, reliable, integrated with Google Workspace | Highly customizable, extensive features | User-friendly, powerful feature set | Robust, enterprise support | Excellent for real-time collaboration |
+| **Weakness** | Dependent on third-party services | Lacks university-specific administrative tools | Complex setup, dated UI | High cost, less tailored | High cost, complex interface | Lacks academic admin features |
+
+---
+
+### **3. Requirement Specifications**
+
+#### **3.1. Functional Requirements**
+
+**Table 3.1:** Summary of Functional Requirements
+
+| Module | Key Functional Requirements |
 | :--- | :--- |
-| **AI** | Artificial Intelligence. A field of computer science dedicated to creating systems capable of performing tasks that normally require human intelligence. |
-| **API** | Application Programming Interface. A set of rules and protocols for building and interacting with software applications. |
-| **BaaS** | Backend-as-a-Service. A cloud computing model where developers outsource all the backend aspects of a web or mobile application so that they only have to write and maintain the frontend. Firebase is the BaaS for this project.[6] |
-| **CR** | Class Representative. A student designated by a teacher to act as a liaison between the teacher and the rest of the class. |
-| **Firebase** | A mobile and web application development platform developed by Google. It provides a suite of tools and services, including a real-time database, authentication, and cloud storage, to accelerate development.[7] |
-| **Flutter** | An open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, Linux, macOS, Windows, and the web from a single codebase. |
-| **FR** | Functional Requirement. A statement that describes a specific function or behavior of the software system.[8] |
-| **HSTU** | Hajee Mohammad Danesh Science and Technology University. |
-| **IEEE** | Institute of Electrical and Electronics Engineers. A professional association that develops standards in a broad range of industries, including the IEEE 830 standard for SRS documents.[3] |
-| **NFR** | Non-Functional Requirement. A requirement that specifies criteria that can be used to judge the operation of a system, rather than specific behaviors (e.g., performance, security).[9, 10] |
-| **SDLC** | Software Development Life Cycle. A process followed for a software project, within a software organization. |
-| **SRS** | Software Requirements Specification. A document that describes the nature of a project, software, or application.[1] |
-| **T\&S** | Teacher and Student. Refers to the primary user groups of the application. |
-| **UI** | User Interface. The graphical layout of an application through which a user interacts. |
-| **UX** | User Experience. The overall experience of a person using a product, especially in terms of how easy or pleasing it is to use. |
+| **Authentication** | Role-based login (Student/Teacher), Secure sign-in, Role verification. |
+| **Profile Mgmt** | View and update profile information, Secure password change. |
+| **Classroom Allocation**| Role-based booking access, Real-time availability check, Conflict detection, Self-cancellation, Public schedule view. |
+| **Online Quiz** | Quiz creation (MCQ/Written), Per-question timers, Student participation, Manual evaluation for written answers, Analytics dashboard. |
+| **Communication** | Public student chat, Private CR-teacher chat. |
+| **Resource Sharing** | File upload (text, image, PDF) by teachers, Real-time feed for students, In-app PDF viewer. |
+| **Smart Alarm** | Manual alarm setting, Automatic alarms for classes based on user preferences. |
+| **AI Assistant** | Natural language queries, Live data integration from Firestore. |
+| **Information Hub** | Comprehensive syllabus viewer, University website integration. |
+| **CR Management** | Teacher can appoint/remove CR, automated notifications for role changes. |
 
-#### **1.4 References**
+#### **3.2. Non-functional Requirements**
 
-This SRS refers to the following documents and resources:
+* **Usability:** The application must be easy to learn, efficient to use, and aesthetically pleasing to ensure high user adoption and satisfaction.
+    * **Learnability:** The user interface is designed to be highly intuitive, allowing new users (both students and teachers) to quickly understand and navigate the application's core functionalities without the need for extensive tutorials or documentation.
+    * **Efficiency:** The workflow for common tasks, such as creating a quiz or booking a classroom, is streamlined to minimize the number of steps and clicks required, enabling proficient users to accomplish their goals quickly.
+    * **Memorability:** The consistent design and logical layout ensure that casual users who return to the app after a period of inactivity can easily reestablish proficiency without having to re-learn the interface.
+    * **Error Prevention:** The system incorporates mechanisms to prevent user errors, such as confirmation dialogs for critical actions (e.g., deleting an allocation or a quiz) and clear validation on all input forms.
+    * **User Satisfaction:** The application employs a modern and visually engaging design language, featuring Glassmorphism, smooth animations, and a consistent theme, to create a positive and enjoyable user experience.
+* **Performance:** The application must be fast, responsive, and efficient in its use of device resources.
+    * **Response Time:** Critical user interactions are optimized for near-instantaneous feedback. The target is for screen transitions to complete in under 500 milliseconds and for real-time data, such as chat messages, to be delivered in under one second under normal network conditions.
+    * **Resource Consumption:** The application is engineered to be lightweight, ensuring that it does not excessively drain the device's battery or consume an unreasonable amount of memory (RAM) or CPU, even during prolonged use.
+    * **Network Efficiency:** The app minimizes data usage and is designed to handle varying network conditions gracefully, providing informative messages to the user during periods of low connectivity instead of crashing.
+* **Security:** The system must protect user data and ensure that access is restricted to authorized individuals.
+    * **Authentication & Authorization:** All access to the application is protected by the robust Firebase Authentication service. Furthermore, the system implements strict role-based authorization, ensuring that users can only access the features and data relevant to their role (e.g., a student cannot access the CR management screen).
+    * **Data Security:** All communication between the mobile application and the backend services (Firebase and Supabase) occurs over encrypted channels (HTTPS/TLS) to protect data in transit. Sensitive information, such as user passwords, is not stored in plaintext.
+    * **Session Management:** The application securely manages user sessions to prevent unauthorized access and ensures that users are properly logged out to protect their accounts.
+* **Scalability:** The application's architecture must be able to handle a growing number of users and an increasing volume of data without a decline in performance.
+    * **Backend Scalability:** The strategic choice of Firebase and Supabase as backend services is central to the application's scalability. These serverless platforms are designed to automatically scale their resources to handle increases in user load and data storage without requiring manual intervention.
+    * **Concurrent Users:** The system is designed to support a high number of concurrent users, such as hundreds of students participating in a quiz simultaneously, without experiencing performance degradation.
+* **Reliability:** The application must be stable, available, and function correctly under a variety of conditions.
+    * **Availability (Uptime):** The system aims for high availability (e.g., 99.5% uptime), which is largely supported by the high reliability of the underlying Firebase and Supabase cloud infrastructure.
+    * **Fault Tolerance:** The application is designed to handle errors gracefully. In the event of network failures or API issues, the system provides clear, informative messages to the user rather than crashing, ensuring a robust user experience.
+    * **Data Integrity:** The system ensures that all data, such as quiz results and room allocations, is stored and retrieved accurately and consistently, preventing data corruption.
+* **Cross-Platform Compatibility:** The choice of technology was made to ensure both current functionality and future extensibility.
+    * **Single Codebase:** By using Flutter, the application is developed from a single codebase for the Android platform.
+    * **Future-Proofing:** This architectural choice makes it significantly easier and more cost-effective to extend the application to support other platforms, such as iOS or a web-based portal, in the future.
 
-1.  IEEE Std 830-1998, *IEEE Recommended Practice for Software Requirements Specifications*. [3]
-2.  Official Flutter Development Documentation. ([https://flutter.dev](https://flutter.dev))
-3.  Official Firebase Platform Documentation. ([https://firebase.google.com/docs](https://firebase.google.com/docs)) [11]
-4.  "HSTU\_T\&S\_HUB Feature Overview," Version 1.0. (The user-provided project infographic).
+---
 
-#### **1.5 Document Overview**
+### **4. System Development**
 
-This SRS is organized into three primary sections. Section 1, the introduction, defines the purpose and scope of the document. Section 2 provides a high-level, overall description of the product, its intended users, the operating environment, and key constraints and assumptions. Section 3 contains the core of the document, presenting the specific and detailed requirements, including external interfaces, all functional capabilities, and the non-functional quality attributes of the system.[12]
+#### **4.1. SDLC Model: Iterative Model**
 
------
+The development of this application followed the **Iterative Model**. This approach involves building the application in repeated cycles (iterations). Each iteration results in an executable, though incomplete, version of the system. This allowed for the incremental development of features, starting with a basic version and progressively adding complexity. This methodology provided the flexibility to gather feedback and make refinements after each build, ensuring the final product is well-aligned with user needs.
 
-### **2. Overall Description**
+**Table 4.1:** SDLC Iteration Breakdown
 
-This section provides a high-level perspective of the "HSTU\_T\&S\_HUB" application. It describes the product's context, its core functions, its user base, its operating environment, and the constraints and assumptions that will govern its development.
-
-#### **2.1 Product Perspective**
-
-The "HSTU\_T\&S\_HUB" system is a new, self-contained, mobile-first application developed to serve the specific academic needs of the HSTU community. It is not an extension of an existing product family or a replacement for a legacy system but rather a novel solution designed to address gaps in current academic communication methods.[12]
-
-The application is architected as a client-server system. The client-side application is a cross-platform mobile app developed using the Flutter framework. The server-side functionality is entirely managed through Google's Firebase platform, which acts as a Backend-as-a-Service (BaaS). This serverless architecture choice is fundamental, as it allows the development to focus on the user-facing application logic while leveraging Google's robust, scalable, and real-time infrastructure for data management, authentication, and other backend services.[6, 13]
-
-A high-level system context diagram visually illustrates the system's boundaries and its primary interactions with external actors and services. The diagram shows the mobile application as the central component, interacting with three user classes (Teacher, Student, CR) and relying on various Firebase services for its operation.
-
-#### **2.2 Product Functions**
-
-The following is a high-level summary of the major functions the "HSTU\_T\&S\_HUB" application will perform. Detailed specifications for each function are provided in Section 3.2 of this document.[14]
-
-  * **User Role Management:** Secure login and registration for Teachers and Students.
-  * **Dynamic User Interfaces:** The application interface dynamically changes to provide role-specific features, particularly for Class Representatives (CRs).
-  * **Online Quiz Management:** Teachers can create, manage, and grade online quizzes. Students can participate in these quizzes in real-time.
-  * **Real-Time Resource Sharing:** Teachers can instantly share learning materials (documents, notes, PDFs) with students.
-  * **AI-Powered Assistance:** An integrated chatbot provides automated answers to common academic queries.
-  * **Multi-Channel Communication:** The system supports various communication channels, including class-wide discussions and exclusive, direct communication between teachers and CRs.
-  * **Class Management:** Teachers can view student lists and designate a CR for each course.
-  * **Academic Information Hub:** Users can view comprehensive details about their courses, schedules, and room allocations.
-  * **Smart Alarm System:** A utility feature that allows users to set automated alarms for their upcoming classes.
-  * **Performance Tracking:** Students can view their quiz scores and receive performance feedback from teachers.
-
-#### **2.3 User Classes and Characteristics**
-
-The system is designed to be used by three distinct classes of users, each with different characteristics, goals, and system privileges. The differentiation of these user classes is essential for implementing role-based access control (RBAC) and tailoring the user experience to meet specific needs.[12, 15]
-
-**Table 2: User Classes and Characteristics**
-
-| User Class | Characteristics | Privileges / Permissions |
+| Iteration | Focus/Goal | Key Outcomes & Modules Developed |
 | :--- | :--- | :--- |
-| **Teacher** | An academic staff member of HSTU responsible for one or more courses. Assumed to be technically proficient and primarily focused on course management, content delivery, and student assessment. | - Create, manage, and grade online quizzes.\<br\>- View real-time quiz participation status.\<br\>- Upload, share, and manage learning resources.\<br\>- View the list of enrolled students for a course.\<br\>- Select and designate one student as the Class Representative (CR).\<br\>- Engage in direct, exclusive communication with the CR.\<br\>- Post announcements and notifications to the entire class. |
-| **Student** | An enrolled student at HSTU taking one or more courses. Assumed to have moderate technical skills and is primarily focused on accessing learning materials, participating in assessments, and staying informed about academic activities. | - Participate in available online quizzes.\<br\>- View and download shared learning resources.\<br\>- Check personal quiz scores and performance feedback.\<br\>- View course details and schedules.\<br\>- Set smart alarms for classes.\<br\>- Interact with the AI Chatbot.\<br\>- Participate in general class discussions. |
-| **Class Representative (CR)** | A student who has been granted additional responsibilities and permissions by a Teacher for a specific course. Possesses all the characteristics of a Student, with an added focus on coordination and communication facilitation. | - All permissions of the **Student** user class.\<br\>- Access to a dynamic interface with additional CR-specific features.\<br\>- Manage and communicate room allocations and schedule changes.\<br\>- Engage in a dedicated, direct communication channel with the Teacher.\<br\>- Act as a moderator or facilitator in class-wide communications as designated by the Teacher. |
+| **1** | Foundation & Architecture | Project setup, backend integration (Firebase/Supabase), state management setup. |
+| **2** | User Data Modeling | Detailed design of the Firestore database schema for all collections. |
+| **3** | Authentication & Access | Functional login/registration system with role-based access control. |
+| **4** | Profiles & Dashboards | Users can manage profiles and access personalized dashboards. |
+| **5** | Classroom Allocation | Functional room booking system with conflict detection for authorized users. |
+| **6** | Smart Alarm System | Functional alarm system with manual and automatic scheduling. |
+| **7** | Notification System | Centralized system for delivering and viewing real-time notifications. |
+| **8** | Quiz Module (Teacher-side) | Teachers can create and manage quizzes. |
+| **9** | Quiz Module (Student-side) | Students can participate in quizzes. |
+| **10**| Quiz Module (Analytics) | Detailed analytics dashboard and evaluation portal for teachers. |
+| **11**| Communication Suite | Functional public and private real-time chat features. |
+| **12**| Resource Sharing | Functional resource sharing system with file upload and real-time feed. |
+| **13**| Information Hub | Syllabus viewer and university website integration. |
+| **14**| Advanced Features | AI Assistant and CR Management tools. |
+| **15**| Final Integration & Polish | Complete, feature-rich, and polished application with end-to-end testing. |
 
-#### **2.4 Operating Environment**
+#### **4.2. Technology Stack**
 
-The software is designed to operate in the following environments [12]:
+**Table 4.2:** Technology Stack Summary
 
-  * **Client-Side (Mobile Application):**
-      * **Operating Systems:** The application must be fully functional on:
-          * Android 8.0 (Oreo, API level 26) and newer.
-          * iOS 13.0 and newer.
-      * **Hardware:** The application is intended for smartphones and tablets and requires a minimum of:
-          * 2 GB of RAM.
-          * 100 MB of available local storage for the application and cached data.
-          * A stable internet connection (Wi-Fi, 4G, or 5G) for real-time features.
-  * **Server-Side (Backend):**
-      * The application's backend is built entirely on the Google Firebase platform. As a BaaS, the server hardware, operating system, and infrastructure maintenance are managed by Google Cloud. The application's performance and availability are therefore dependent on the operational status of these services.
+| Category | Technology | Role in Project |
+| :--- | :--- | :--- |
+| **Frontend** | Flutter | Cross-platform framework for building the entire UI and client-side logic. |
+| **Backend** | Firebase | Primary backend for authentication, core database (Firestore), and notifications. |
+| | Supabase | Secondary backend for file storage and real-time database for resource sharing. |
+| **AI Service** | Google Gemini API | Powers the natural language processing and query-answering for the AI Assistant. |
 
-#### **2.5 Design and Implementation Constraints**
+#### **4.3. System Architecture and Module Development**
 
-The development of "HSTU\_T\&S\_HUB" is bound by the following constraints, which are non-negotiable technical decisions that shape the architecture and implementation of the system [5, 16]:
+*(A UML Diagram of the System Architecture would be placed here as Figure 4.1)*
 
-  * **Frontend Framework:** The client application **must** be developed using the **Flutter** framework to ensure a single codebase for both Android and iOS platforms.
-  * **Backend Platform:** The application **must** utilize **Google Firebase** as its exclusive Backend-as-a-Service (BaaS). All backend functionalities—including but not limited to user authentication, database management, file storage, and push notifications—will be implemented using the corresponding Firebase services.[7, 13]
-  * **Programming Language:** The primary programming language for the client application **must** be **Dart**.
-  * **Development Methodology:** The project development **must** adhere to an **Incremental SDLC Model**, where the system is built and delivered in functional parts.
-  * **Database Type:** The application will use a NoSQL database provided by Firebase (either Realtime Database or Cloud Firestore), chosen based on the specific needs of different features for querying complexity and data structure.[11]
+**Table 4.3:** Firestore Database Schema Overview
 
-#### **2.6 Assumptions and Dependencies**
+| Collection | Sub-collection | Purpose |
+| :--- | :--- | :--- |
+| **users** | notifications | Stores all user profiles (students, teachers) and their roles. Each user has a sub-collection for their personal notifications. |
+| **quizzes** | questions | Stores the metadata for each quiz. Each quiz has a sub-collection containing all its question documents. |
+| **results** | | Stores the results of each student's quiz attempt, linked by `quizId` and `studentId`. |
+| **room_allocation**| | Stores all classroom booking information, including room, time, and allocator details. |
+| **chat_rooms** | messages | Stores metadata for private chat rooms. Each room has a sub-collection for its messages. |
+| **student_chat** | | Stores all messages for the public, global student chat room. |
 
-The design and operation of the system are based on the following assumptions and dependencies [17]:
+---
 
-  * **Assumptions:**
-      * **User Identity:** It is assumed that all users (Teachers and Students) will possess a unique and verifiable HSTU-issued identifier (e.g., a student or faculty ID number) that can be used for the registration and authentication process.
-      * **Network Connectivity:** It is assumed that users will have access to a reasonably consistent and reliable internet connection. While Firebase's offline persistence will handle temporary disruptions, the core real-time functionalities of the application are fundamentally dependent on network access.[11]
-      * **AI Chatbot Content:** It is assumed that the knowledge base for the AI Chatbot will be pre-populated with a curated set of frequently asked questions and answers relevant to HSTU's academic policies, schedules, and procedures.
-  * **Dependencies:**
-      * **Firebase Platform:** The application is critically dependent on the availability, reliability, and API consistency of Google Firebase services. Any outage, deprecation of features, or changes in Firebase's terms of service could directly and significantly impact the application's functionality.
-      * **Third-Party App Stores:** The distribution and updating of the mobile application are dependent on the policies and approval processes of the Google Play Store (for Android) and the Apple App Store (for iOS).
+### **5. Results and Discussion**
 
------
+The "HSTU T&S HUB" application successfully meets all the specified objectives, delivering a feature-rich and stable platform.
 
-### **3. Specific Requirements**
+*(This is where you would insert screenshots of your application to visually demonstrate each function/layer, referenced by the Figure numbers in the "List of Figures".)*
 
-This section provides a detailed enumeration of the system's requirements. It is the most critical part of the SRS, as it contains the specific, testable details that will guide the development and verification process. The requirements are categorized into external interfaces, functional requirements, and non-functional requirements.[1, 4]
+#### **5.1. The Teacher's Experience**
 
-#### **3.1 External Interface Requirements**
+* **Dashboard:** A screenshot of the teacher's dashboard, showing quick access to "Set Question," "Student List," "Resources," etc.
+* **Quiz Creation:** Screenshots of the `create_quiz_screen`, showing how a teacher adds MCQ and written questions.
+* **Quiz Analytics:** A screenshot of the `quiz_details_screen` displaying the bar chart of student scores and the detailed results list.
+* **CR Management:** A screenshot of the `student_list_screen`, showing the button to "Make CR" or "Remove" a student.
 
-This subsection describes how the software will interact with users, hardware devices, and other software components.[2]
+#### **5.2. The Student's Experience**
 
-##### **3.1.1 User Interfaces (UI)**
+* **Dashboard:** A screenshot of the student dashboard, highlighting the different options available, including a special "Room Allocation" button if the student is a CR.
+* **Resource Sharing:** A screenshot of the `student_home_screen` showing the real-time feed of resources shared by a teacher.
+* **Smart Alarm:** A screenshot of the `alarm_page` showing both manually set alarms and automatically generated alarms for classes.
+* **AI Assistant:** A screenshot of the `chatbot_page` showing a conversation where the AI answers a query about the number of students in the system.
 
-The application's UI shall be designed to be intuitive, accessible, and consistent across platforms.
+---
 
-  * **UI-1:** The UI shall adhere to the design principles of Google's Material Design for Android and Apple's Human Interface Guidelines for iOS to provide a native look and feel.[15]
-  * **UI-2:** The application layout must be responsive, adapting gracefully to various screen sizes (smartphones, tablets) and orientations (portrait and landscape).
-  * **UI-3:** Key information and frequently used actions shall be placed in prominent locations within the UI to be accessible with a maximum of two taps from the main screen of any given feature.
-  * **UI-4:** The application shall provide clear visual feedback for user actions, such as button presses, loading states, and successful or failed operations.
+### **6. Economic Analysis**
 
-##### **3.1.2 Hardware Interfaces**
+#### **6.1. Cost Analysis**
 
-  * **HI-1 (Notification Service):** The application shall interface with the mobile device's native operating system notification service to display push notifications and alarms triggered by the Smart Alarm system or server-side events.
-  * **HI-2 (Local Storage):** The application shall interface with the device's local file system (disk) for two purposes:
-      * To cache application data for offline access, managed via the Firebase SDK's offline persistence feature.[11]
-      * To save user-downloaded files (e.g., PDFs, images) from the Resource Sharing feature into a publicly accessible "Downloads" folder.
-  * **HI-3 (Camera/Gallery):** The application shall request permission to interface with the device's camera and photo gallery to allow users (e.g., Teachers) to upload images as part of learning resources.
+The development and operational costs of this project are significantly minimized due to the strategic choice of technologies:
+* **Development Cost:** The primary cost is the development time. There are no software licensing fees, as Flutter and its development tools are open-source.
+* **Operational Cost:** The use of Firebase and Supabase is highly cost-effective. Both platforms offer generous free tiers ("Spark Plan" for Firebase, "Free Plan" for Supabase) that are sufficient for initial deployment, testing, and handling a moderate user base. Costs would only be incurred if the application scales to a very large number of active users, exceeding the free tier limits.
 
-##### **3.1.3 Software Interfaces**
+#### **6.2. Benefit Analysis**
 
-The application will interact with several external software components, primarily the services provided by the Firebase platform.[15]
+**Table 6.1:** Cost-Benefit Analysis Summary
 
-  * **SI-1 (Firebase Authentication):** The system shall exclusively use the Firebase Authentication SDK to manage all aspects of user identity, including sign-up, sign-in, session persistence, and password reset functionalities.[7, 11]
-  * **SI-2 (Firebase Database):** The system shall use the Firebase Firestore SDK for storing, retrieving, and synchronizing all structured application data in real-time. This includes user profiles, course information, quiz data (questions, submissions, grades), and chat messages. The choice of Firestore over Realtime Database is made for its advanced querying capabilities and more structured data model, which is suitable for the application's needs.[6]
-  * **SI-3 (Firebase Cloud Storage):** The system shall use the Firebase Cloud Storage SDK for uploading, downloading, and managing all user-generated binary files, such as PDF documents, Word files, and images shared in the "Share Resources" feature.[11, 18]
-  * **SI-4 (Firebase Cloud Messaging - FCM):** The system shall integrate the FCM SDK to receive and process push notifications sent from the backend (e.g., via Firebase Functions) to alert users of important events.[19]
+| Benefit Category | Description |
+| :--- | :--- |
+| **Increased Efficiency**| Automates manual tasks like room booking, quiz creation, and MCQ grading, saving significant time for both faculty and students. |
+| **Improved Communication**| Centralizes all academic communication into official channels, reducing misinformation and ensuring all users receive timely updates. |
+| **Enhanced Engagement**| A modern, interactive platform with features like the AI assistant and smart alarms encourages greater student engagement with academic activities. |
+| **Accessibility** | Provides 24/7 mobile access to academic resources, schedules, and tools, supporting flexible learning. |
+| **Data-Driven Insights**| The quiz analytics module provides teachers with valuable data to assess student performance and refine their teaching methods. |
 
-##### **3.1.4 Communications Interfaces**
+---
 
-  * **CI-1 (Secure Protocol):** All data communication between the client application and the Firebase backend services shall be conducted exclusively over a secure, encrypted connection (HTTPS/TLS 1.2 or higher). This is managed automatically by the Firebase SDKs and is a mandatory requirement for data integrity and security.
-  * **CI-2 (Push Notifications):** The primary mechanism for asynchronous, server-to-client communication for alerts (e.g., new quiz announcement, new resource available) shall be push notifications.
+### **7. Conclusion**
 
-#### **3.2 Functional Requirements (FR)**
+#### **7.1. Conclusive Summary**
 
-This section details the specific behaviors and functions of the system. Each requirement is given a unique identifier for traceability and is written in a clear, unambiguous, and verifiable manner.[2, 8, 20]
+The "HSTU T&S HUB" project successfully demonstrates the development of a modern, integrated academic portal. By combining a powerful frontend with a hybrid backend, the application effectively addresses key challenges in university management. It stands as a robust, scalable, and user-centric solution poised to enhance the digital campus experience at HSTU.
 
-##### **Module FR-1: User Authentication and Role Management**
+#### **7.2. Limitations of the Project**
 
-  * **FR-1.1:** The system shall present an initial screen where users can select their role ("Teacher" or "Student") before proceeding to the login/registration page.
-  * **FR-1.2:** The system shall provide a registration form that requires users to input their official HSTU ID, a valid email address, and a password.
-  * **FR-1.3:** The system shall validate the password field during registration to ensure it meets minimum complexity requirements (e.g., at least 8 characters, including at least one number and one letter).
-  * **FR-1.4:** The system shall store user credentials securely using Firebase Authentication. Passwords shall never be stored in plaintext.
-  * **FR-1.5:** The system shall provide a "Forgot Password" functionality that allows a user to reset their password by receiving a secure link to their registered email address.
-  * **FR-1.6:** Upon successful login, the system shall retrieve the user's role and direct them to the appropriate dashboard (Teacher, Student, or CR).
-  * **FR-1.7:** The system shall maintain user sessions, allowing users to remain logged in between application launches until they explicitly log out.
+* **Offline Functionality:** The application is heavily dependent on an active internet connection. There is currently no offline support.
+* **Platform Dependency:** The system relies on third-party services (Firebase, Supabase, Google), and any changes or outages on their end could affect the app.
+* **Limited Content Types:** The resource sharing feature currently supports only text, images, and PDFs, not video or other media types.
 
-##### **Module FR-2: Teacher-Centric Features**
+#### **7.3. Recommendation/Future Work**
 
-  * **FR-2.1 (Quiz Creation):** The system shall allow a logged-in Teacher to create a new online quiz. The creation form must include fields for a quiz title, a time duration (in minutes), and a mechanism to add multiple-choice questions. Each question must have at least two options, and one option must be designated as the correct answer.
-  * **FR-2.2 (Quiz Activation):** The system shall allow a Teacher to publish or activate a created quiz, making it visible and available for participation by all students enrolled in the associated course.
-  * **FR-2.3 (Real-Time Monitoring):** While a quiz is active, the system shall provide the Teacher with a real-time view showing a list of students who have started the quiz, their progress, and their completion status.
-  * **FR-2.4 (Automated Grading):** Upon quiz submission by a student, the system shall automatically grade the multiple-choice questions and store the score.
-  * **FR-2.5 (Results Release):** The system shall allow a Teacher to release the quiz scores, making them visible to the students.
-  * **FR-2.6 (Resource Upload):** The system shall allow a Teacher to select and upload files (formats supported: PDF, DOCX, PPTX, JPG, PNG) from their device to a shared resource area for a specific course.
-  * **FR-2.7 (CR Designation):** The system shall allow a Teacher to view a list of all students enrolled in a course and select one student to be assigned the role of Class Representative (CR). The system must confirm the action before applying the role change.
+* **Offline Caching:** Implement local caching to allow users to access some data, like the syllabus or previously downloaded resources, while offline.
+* **Video Support:** Extend the resource sharing module to support video lectures and other multimedia content.
+* **Advanced Analytics:** Provide teachers with more in-depth analytics for quizzes, such as question-wise performance analysis.
+* **Integration with University Systems:** Explore possibilities of integrating with official university databases for student records and results.
+* **Web and iOS Versions:** Since it is built with Flutter, the project can be extended to support iOS and a web-based portal with minimal code changes.
 
-##### **Module FR-3: Student-Centric Features**
+---
 
-  * **FR-3.1 (Quiz Listing):** The system shall display a list of all active and past quizzes for the courses in which a Student is enrolled.
-  * **FR-3.2 (Quiz Participation):** The system shall allow a Student to select an active quiz and begin the test. A timer, corresponding to the duration set by the Teacher, shall be displayed and count down during the quiz.
-  * **FR-3.3 (Quiz Submission):** The system shall allow a Student to submit their answers before the timer expires. If the timer expires, the system shall automatically submit the quiz with the answers selected up to that point.
-  * **FR-3.4 (Resource Listing):** The system shall display a list of all learning materials shared by the Teacher for the Student's enrolled courses.
-  * **FR-3.5 (Resource Download):** The system shall allow a Student to tap on a resource to either view it within the app (for images) or download it to their device's local storage (for documents).
-  * **FR-3.6 (Score Viewing):** Once results are released by the Teacher, the system shall allow a Student to view their score for a completed quiz.
+### **8. References**
 
-##### **Module FR-4: Class Representative (CR) Empowered Features**
+*(List any websites, books, or research papers you consulted during your project development.)*
 
-  * **FR-4.1 (Dynamic Interface):** For a user who has been designated as a CR, the system shall display an enhanced interface that includes all standard Student features plus a dedicated section for CR functionalities.
-  * **FR-4.2 (Room Allocation Notification):** The system shall provide the CR with a simple interface to create and post a notification regarding room allocations or class schedule changes. This notification shall be visible to all students in that specific course.
-  * **FR-4.3 (Exclusive Teacher Communication):** The system shall provide a dedicated, one-to-one chat interface that allows for direct and private communication between the CR and the course Teacher. This channel must be separate from any general class-wide discussion forum.
-
-##### **Module FR-5: System-Wide Features**
-
-  * **FR-5.1 (AI Chatbot):** The system shall feature an AI-powered chatbot accessible from the main navigation. The chatbot shall be capable of parsing user queries in natural language and providing answers based on its pre-populated knowledge base regarding common academic questions (e.g., "When is the mid-term exam?").
-  * **FR-5.2 (Smart Alarm):** The system shall allow any user to view their class schedule and set an alarm for any upcoming class. The alarm must trigger a local device notification 15 minutes before the scheduled class start time.
-  * **FR-5.3 (Course Details):** The system shall display a comprehensive details page for each course, showing the course title, course code, teacher's name, and class schedule.
-
-#### **3.3 Non-Functional Requirements (NFR)**
-
-This section defines the quality attributes and constraints of the system. These requirements are critical for user satisfaction and overall system success, focusing on *how* the system performs its functions.[9, 21]
-
-##### **3.3.1 Performance Requirements**
-
-  * **NFR-1.1 (UI Responsiveness):** All user interactions with UI elements (e.g., button taps, scrolling lists, tab switches) shall provide visual feedback within 200 milliseconds on a target device.
-  * **NFR-1.2 (Cold Start Time):** The application shall launch from a cold start (not in memory) to an interactive state (login screen or dashboard) within 3 seconds on a target device.
-  * **NFR-1.3 (Real-Time Data Synchronization):** In a live quiz or chat session, any new data (e.g., a new message, a change in participation status) committed to the Firebase backend must be reflected on all connected client devices within 1000 milliseconds under a stable 4G network condition. This is a measure of the end-to-end latency.[11]
-  * **NFR-1.4 (Resource Download Speed):** The system shall be able to download a 5 MB file from Firebase Cloud Storage in under 15 seconds on a stable 4G connection with an average bandwidth of 5 Mbps.
-
-##### **3.3.2 Security Requirements**
-
-  * **NFR-2.1 (Data-in-Transit Encryption):** All data exchanged between the mobile application and Firebase services must be encrypted using Transport Layer Security (TLS) version 1.2 or higher.
-  * **NFR-2.2 (Role-Based Access Control Enforcement):** The system's backend, via Firebase Security Rules, must strictly enforce the permissions defined in Table 2. Any API call from a client that violates these rules (e.g., a Student attempting to write to the 'quizzes' collection) must be denied. This is a critical server-side security measure.[11]
-  * **NFR-2.3 (Secure Local Storage):** The application must not store any sensitive information, such as passwords or authentication tokens, in plaintext on the device's local storage. Firebase SDKs handle secure token management.
-  * **NFR-2.4 (Input Validation):** All user-provided input must be sanitized on the client-side before being sent to the backend to prevent common injection attacks.
-
-##### **3.3.3 Usability Requirements**
-
-Usability will be measured against specific, task-oriented goals.[9, 22]
-
-  * **NFR-3.1 (Learnability):** A first-time Teacher user must be able to successfully create and publish a 3-question quiz within 10 minutes of logging in for the first time, without requiring external documentation or assistance.
-  * **NFR-3.2 (Efficiency):** An experienced Student user must be able to find and download a specific, newly uploaded resource for a course in under 45 seconds from the application dashboard.
-  * **NFR-3.3 (Error Rate):** The rate of user errors resulting in a failed action during the quiz participation process (excluding incorrect answers) shall not exceed 3%.
-  * **NFR-3.4 (Satisfaction):** On a post-use survey, at least 80% of users should rate the application's ease of use as 4 or 5 on a 5-point scale.
-
-##### **3.3.4 Reliability and Availability**
-
-  * **NFR-4.1 (Availability):** The application's core functionalities shall be available to users 99.5% of the time. This is contingent upon the availability of the underlying Google Firebase services, whose SLA should be considered the baseline.
-  * **NFR-4.2 (Offline Capability):** The application must remain responsive even when the user's device is offline. Users shall be able to view all previously loaded data, such as course details, downloaded resources, and cached chat messages. This is enabled by configuring Firebase's offline persistence feature.[11, 13]
-  * **NFR-4.3 (Data Synchronization on Reconnect):** Any data created or modified by the user while offline must be automatically queued and synchronized with the server as soon as network connectivity is restored, with any conflicts being handled by Firebase's default merge strategies.
-  * **NFR-4.4 (Crash Rate):** The application's session crash rate, as measured by a service like Firebase Crashlytics, must be below 0.5%.
-
-##### **3.3.5 Scalability**
-
-  * **NFR-5.1 (Concurrent Quiz Takers):** The system architecture must support up to 500 students participating in the same quiz instance concurrently, with quiz submission response times remaining under 3 seconds.
-  * **NFR-5.2 (User Base Growth):** The database schema and security rules in Firestore must be designed to efficiently support a user base of up to 10,000 users and 1,000 courses without requiring significant architectural refactoring.
-  * **NFR-5.3 (Resource Storage):** The system must be able to handle a total of 1 TB of file storage in Firebase Cloud Storage without performance degradation in upload or download speeds.
-
-##### **3.3.6 Maintainability**
-
-  * **NFR-6.1 (Code Modularity):** The Flutter codebase shall be structured into logical modules (e.g., by feature: `authentication`, `quiz`, `resources`; or by layer: `data`, `domain`, `presentation`). This organization is intended to simplify debugging, modification, and the addition of new features in future increments.
-  * **NFR-6.2 (Code Documentation):** All public APIs, complex algorithms, and non-obvious business logic within the Dart code shall be documented using standard inline comments (`//` or `///`).
-  * **NFR-6.3 (Code Style Compliance):** The entire codebase must adhere to the official Dart Style Guide, enforced through automated linting tools, to ensure consistency and readability.
-
------
-
-### **4. Conclusion**
-
-This Software Requirements Specification document provides a comprehensive and detailed foundation for the development of the "HSTU\_T\&S\_HUB" mobile application, Version 1.0. It formally captures the product's scope, delineates its intended user base, and establishes the architectural constraints, chief among them being the use of Flutter for the client and Google Firebase for the backend.
-
-The document meticulously outlines all specific requirements, breaking them down into functional capabilities that define *what* the system will do, and non-functional attributes that define *how well* it will do it. By providing specific, measurable, and testable requirements for performance, security, usability, and reliability, this SRS serves as a critical tool for quality assurance.
-
-As the project follows an incremental development model, this document represents the definitive blueprint for the initial development cycles. It will act as a living document, subject to controlled revisions and updates, providing a stable and traceable baseline against which all future work can be planned, executed, and verified. Adherence to this specification will ensure that the final product aligns with the project's goals of creating a streamlined, efficient, and engaging academic communication system for the HSTU community.
+* Flutter Documentation. Retrieved from [https://flutter.dev/docs](https://flutter.dev/docs)
+* Firebase Documentation. Retrieved from [https://firebase.google.com/docs](https://firebase.google.com/docs)
+* Supabase Documentation. Retrieved from [https://supabase.io/docs](https://supabase.io/docs)
+* Google AI for Developers. Retrieved from [https://ai.google.dev/](https://ai.google.de
