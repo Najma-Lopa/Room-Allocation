@@ -2,25 +2,6 @@
 
 ---
 
-**Cover Page**
-
-> **Project Title:** HSTU T&S HUB: An Integrated Academic Portal for Students and Teachers
->
-> **Submitted By:**
-> [Your Name(s)]
-> [Your Student ID(s)]
->
-> **Supervised By:**
-> [Your Supervisor's Name]
-> [Supervisor's Designation]
->
-> **Department of Computer Science and Engineering**
-> **Hajee Mohammad Danesh Science and Technology University, Dinajpur**
->
-> **Date of Submission:** [Date]
-
----
-
 **Table of Contents**
 
 * List of Figures
